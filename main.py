@@ -48,7 +48,7 @@ while z == 1:
     continue
   print('So here is your', a, d[str(a)] if str(a) in d else 'th', 'Word\n', jumble)
   guess = input("Your Guess: ")
-  if guess == jumble:
+  if guess == picked:
     print("Correct! You got a point")
     score += 1
     a += 1
@@ -63,9 +63,10 @@ while z == 1:
        break
     else:
       x = input("Guess: ")
-      if x == jumble:
+      if x == picked:
         print("This Time you got the right one! gg")
         score = score + 1
+        a += 1
       elif x == "0":
         print("Your total score:", score)
         break
@@ -80,9 +81,10 @@ while z == 1:
 
         else:
           j = input("Guess: ")
-          if j == jumble:
+          if j == picked:
             print("This time you got the right one! gg")
             score = score + 1
+            a += 1
           elif j == "0":
             print("Your total score:", score)
             break
